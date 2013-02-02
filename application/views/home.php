@@ -36,7 +36,7 @@
     	<!-- Contains everything in the website -->
     	<div class="container" id="splash">
     		<div class="header">
-    			<a href="index.html">Big Booty Bros</a>
+    			<a href="index.php">Big Booty Bros</a>
     		</div>
     		
     		<!-- This is the personals page div, it will contain all of the options available to the user -->

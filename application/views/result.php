@@ -12,12 +12,12 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Gift Giving</title>
-
-		<link href="styles/bootstrap.css" rel="stylesheet" media="screen">
-		<link href="styles/main.css" rel="stylesheet">
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/Results.js"></script>
+		
+		<link href="./styles/bootstrap.css" rel="stylesheet" media="screen">
+		<link href="./styles/main.css" rel="stylesheet">
+		<script src="./js/jquery.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/Results.js"></script>
 		
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
 
@@ -35,7 +35,7 @@
 		<div class="container">
 			
     		<div class="header">
-    			<a href="index.html">Big Booty Bros</a>
+    			<a href="index.php">Big Booty Bros</a>
     		</div>
 
 

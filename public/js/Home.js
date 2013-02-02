@@ -37,7 +37,7 @@ Home.prototype = {
 	},
 	
 	search: function() {
-		window.location = "results.html";
+		window.location = "index.php/result/jordangens";
 	},
 	
 	trending: function() {

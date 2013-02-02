@@ -13,7 +13,20 @@ class Main extends CI_Controller {
 	{
         $data['logURL'] = $this->user->logURL();
         $data['loggedIn'] = $this->user->loggedIn();
-		$this->load->view('index',$data);
+		
+		if($data["loggedIn"]){
+			$this->load->view('home',$data);
+		}else{
+			$this->load->view('index',$data);
+		}
 
 	}
+	
+	public function result($user)
+	{
+		//Get data for $user and pass it to the result view:
+		$data = "";
+		$this->load->view('result',$data);
+	}
+	
 }
