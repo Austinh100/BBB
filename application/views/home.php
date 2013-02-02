@@ -19,7 +19,7 @@
 		<script src="http://bbb.austinh100.com/js/bootstrap.min.js"></script>
 		<script src="http://bbb.austinh100.com/js/Home.js"></script>
 		
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
 		
 		<script>
 			window.onload = function(){
@@ -79,13 +79,13 @@
     				
     				<!-- Profile -->
     				<div id="myProfile" class="homePage" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background: rgb(187, 179, 177) !important; color: white;">		
-					<div style="margin-top: 60px; opacity: 0.5;">
+					<div style="margin-top: 60px; opacity: 0.5; font-weight: 600;">
 						Logged In As
 					</div>
 					
 					<div style="height: 100px; width: 100px;margin: 20px auto; background-image: url(<? echo $seven ?>); background-size: contain;"></div>
 						
-    					<div class="name" style="font-size: 1.2em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo $name; ?></div>
+    					<div class="name" style="font-size: 1.2em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600;"><?php echo $name; ?></div>
     				</div>
 					
     			</div>
