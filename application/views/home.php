@@ -47,10 +47,10 @@
     				
     				<!-- Profile -->
     				<div id="myProfile" class="homePage">
-    					<br/><span class="name">Jordan Gensler</span> <br/>
+    					<br/><span class="name"><?php echo $name; ?></span> <br/>
     					<span class="transactions">Past Transactions</span>
     				</div>
-    				
+					
     			</div>
     			
     			<div class="span6">
