@@ -8,8 +8,8 @@
 
 class User extends CI_Model {
 
-    function getLikedPageTitles($FB, $fbID) {
-
+    function getFriendsList() {
+        return json_encode($this->facebook->api("/me/friends"));
     }
 
     function loggedIn() {

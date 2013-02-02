@@ -13,8 +13,9 @@ class Main extends CI_Controller {
 	{
         $data['logURL'] = $this->user->logURL();
         $data['loggedIn'] = $this->user->loggedIn();
-		
+
 		if($data["loggedIn"]){
+            $data['friends'] = $this->user->getFriendsList();
 			$this->load->view('home',$data);
 		}else{
 			$this->load->view('index',$data);
