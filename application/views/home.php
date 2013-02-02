@@ -59,7 +59,7 @@
 							
 							for(var i = 0; i < friends.data.length; i++){
 								fname.push(friends.data[i].name);
-								assoch[friends.data[i].name] = friends.data[i].
+								assoch[friends.data[i].name] = friends.data[i].id
 							}
 							
 							$("#friendname").typeahead({source: fname})
