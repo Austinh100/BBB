@@ -46,9 +46,8 @@
     			<div class="span3">
     				
     				<!-- Profile -->
-    				<div id="myProfile" class="homePage">
-    					<br/><span class="name"><?php echo $name; ?></span> <br/>
-    					<span class="transactions">Past Transactions</span>
+    				<div id="myProfile" class="homePage" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+    					<br/><span class="name" style="font-size: 1.2em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo $name; ?></span> <br/>
     				</div>
 					
     			</div>
