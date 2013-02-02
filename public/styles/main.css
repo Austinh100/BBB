@@ -1,0 +1,115 @@
+body {
+	background-color: rgb(236,236,236);
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	font-family: "Helvetica Neue", HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;
+	color: rgb(84, 70, 65);
+}
+
+.header {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 4em;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+}
+
+.header a {
+	color: rgb(84, 70, 65);
+}
+.header a:hover {
+	text-decoration: none;
+}
+
+.intro {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin-top: 20px;
+}
+
+.startBtn {
+	/*box-shadow: inset 0px 1px 0px rgba(255,255,255,0.5), inset 0px 10px 30px rgba(255,255,255,0.3), 0px 1px 0px rgba(255, 255, 255, 0.2);*/
+	background-color: rgb(19, 96, 151);
+	width: 400px;
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 20px;
+	color: #fff;
+	font-size: 3em;
+	margin: 0 auto;
+	margin-top: 50px;
+	cursor: pointer;
+}
+.startBtn:active {
+	background-color: rgba(19, 96, 151, 0.8);
+}
+
+.fader {
+	font-size: 0.4em;
+	margin-top: 20px;
+	font-style:italic;
+}
+
+.start-for {
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+	font-size: 1em;
+	margin-top: -50px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+.recommendation {
+	text-align: center;
+	font-size: 1.4em;
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 10px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	margin-top: 30px;
+	opacity: 0.5;
+	margin-bottom:10px;
+}
+
+.hit {
+	padding: 10px;
+	background-color: rgba(19, 96, 151, 0.8);
+	margin-top:10px;
+	height:150px;
+}
+.hit-header {
+	font-size: 2em;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: rgba(255,255,255,0.5);
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.hit-label {
+	font-size: 3em;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	margin-top: 42px;
+	color: white;
+}
+
+.selling {
+	padding: 10px;
+	background-color: rgba(19, 96, 151, 0.1);
+	height:150px;
+	margin-top:10px;
+}
+
+.homePage {
+	background-color:white;
+	height:300px;
+	width:auto;
+	text-align:center;
+	border-radius:10px;
+}
+.name {
+	font-size:175%;
+}
