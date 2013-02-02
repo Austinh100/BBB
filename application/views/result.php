@@ -40,9 +40,12 @@
 
 
 			<!-- Recommendation Row -->
-			<div class="row intro">
+			<div class="row intro" style="margin-bottom: 0px;">
 				<div class="recommendation" id="recommendation">
 					Displaying Results for <i><? echo $name ?></i>
+					<div style="margin-top: 15px; font-size: 0.6em;">
+						Refine Results
+					</div>
 				</div>
 			</div>
 
