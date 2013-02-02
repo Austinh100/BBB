@@ -44,10 +44,35 @@
 				<div class="recommendation" id="recommendation">
 					Displaying Results for <i><? echo $name ?></i>
 					<div style="margin-top: 15px; font-size: 0.6em;">
-						<a href="#">Refine Results</a>
-						<div id="refine">
-							<div>Pinterest Username:<input></div>
+						<a id="refButton" href="#">Refine Results</a>
+						<div id="refine" style="text-align: center; margin: 0px auto; display: none;">
+							<form class="form-horizontal" style="width: 300px; margin-left: 250px; margin-top: 20px;">
+							  <div class="control-group">
+							    <label class="control-label" for="inputEmail" style="text-alrign: right;">Pinterest Username</label>
+							    <div class="controls">
+							      <input type="text" id="pinterestInput" placeholder="pinterest...">
+							    </div>
+							  </div>
+							  <div class="control-group">
+							    <label class="control-label" for="inputPassword">Etsy Username</label>
+							    <div class="controls">
+							      <input type="text" id="etsyInput" placeholder="etsy...">
+							    </div>
+							  </div>
+							  <div class="control-group">
+							    <div class="controls">
+							      <button type="submit" class="btn">Save User Information</button>
+							    </div>
+							  </div>
+							</form>
 						</div>
+						<script>
+						$(function(){
+							$("#refButton").click(function(){
+								$("#refine").stop(true, false).slideToggle("slow");
+							});
+						});
+						</script>
 					</div>
 				</div>
 			</div>
