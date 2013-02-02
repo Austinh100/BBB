@@ -13,6 +13,7 @@ class Main extends CI_Controller {
 	{
         $data['logURL'] = $this->user->logURL();
         $data['loggedIn'] = $this->user->loggedIn();
+        $data['seven'] = $this->user->getFbProfilePic();
 
 		if($data["loggedIn"]){
             $data['friends'] = $this->user->getFriendsList();
