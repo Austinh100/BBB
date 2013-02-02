@@ -13,11 +13,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Gift Giving</title>
         
-        <link href="styles/bootstrap.css" rel="stylesheet" media="screen">
-		<link href="styles/main.css" rel="stylesheet">
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/Home.js"></script>
+        <link href="http://austinh100.com/bigbootybros/public/styles/bootstrap.css" rel="stylesheet" media="screen">
+		<link href="http://austinh100.com/bigbootybros/public/styles/main.css" rel="stylesheet">
+		<script src="http://austinh100.com/bigbootybros/public/js/jquery.js"></script>
+		<script src="http://austinh100.com/bigbootybros/public/js/bootstrap.min.js"></script>
+		<script src="http://austinh100.com/bigbootybros/public/js/Home.js"></script>
 		
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
 		
@@ -58,6 +58,10 @@
     				<div id="search" class="homePage">
     					<br/><span class="name">Find A Gift</span> <br/>
     					<span class="transactions">Find the perfect gift for anybody you know.</span>
+						<>
+						<input id="friendname" type="text" data-provide="typeahead" class="search-query" placeholder="Enter Friend's Name..." />
+						<script>$("#friendname").typeahead({source: ["Jordan Gensler"]})</script>
+						<div>Find Ideas</div>
     				</div>
     				
     				
