@@ -10,7 +10,7 @@ Home.prototype = {
 
 	result: function() {
 		console.log("Clicked!");
-		var val = document.getElementById("friendname").value;
+		var val = document.getElementById("friendname").value.toLowerCase();
 		if(assoch[val]){
 			window.location = "http://bbb.austinh100.com/main/result/" + assoch[val];
 		}

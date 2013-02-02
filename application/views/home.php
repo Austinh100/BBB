@@ -23,7 +23,7 @@
 		
 		<script>
 			window.onload = function(){
-				var result = new Home();
+				var home = new Home();
 			}
 		</script>
         
@@ -48,7 +48,7 @@
     					<br/><span class="name">Find A Gift</span> <br/>
     					<span class="transactions">Find the perfect gift for anybody you know.</span>
 						<div style="margin-top: 20px;">
-							<input id="friendname" type="text" placeholder="Enter Friend's Name..." style="width: 300px; padding: 15px; height: 40px; font-size: 1.3em;"/>
+							<input id="friendname" type="text" placeholder="Enter Friend's Name..." style="width: 300px; padding: 15px; height: 40px; font-size: 1.3em;" autofocus/>
 							
 							<script>
 							
@@ -59,7 +59,7 @@
 							
 							for(var i = 0; i < friends.data.length; i++){
 								fname.push(friends.data[i].name);
-								assoch[friends.data[i].name] = friends.data[i].id
+								assoch[friends.data[i].name.toLowerCase()] = friends.data[i].id
 							}
 							
 							$("#friendname").typeahead({source: fname})
