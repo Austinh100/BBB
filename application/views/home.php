@@ -58,6 +58,10 @@
     				<div id="search" class="homePage">
     					<br/><span class="name">Find A Gift</span> <br/>
     					<span class="transactions">Find the perfect gift for anybody you know.</span>
+						<>
+						<input id="friendname" type="text" data-provide="typeahead" class="search-query" placeholder="Enter Friend's Name..." />
+						<script>$("#friendname").typeahead({source: ["Jordan Gensler"]})</script>
+						<div>Find Ideas</div>
     				</div>
     				
     				
