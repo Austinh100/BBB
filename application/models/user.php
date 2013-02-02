@@ -26,6 +26,11 @@ class User extends CI_Model {
         }
         return false;
     }
+	
+	function getName() {
+		$me = $this->facebook->api('/me');
+		return $me->name
+	}
 
     function logURL() {
         $params = array(
