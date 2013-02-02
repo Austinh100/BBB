@@ -8,8 +8,14 @@
 
 class FBApi extends CI_Model {
 
-    function getLikedPageTitles($FB, $fbID) {
-
+    function getLikedPageTitles() {
+        $fql = array(
+            "query1"=>"SELECT uid, page_id FROM page_fan WHERE uid IN (SELECT uid2 FROM friend WHERE uid1 = me())",
+            "query2"=>"SELECT name FROM page WHERE `page_id`= page_id IN (#query1)");
+        $result = $facebook->api(array(
+            'method' => 'fql.query',
+            'query' => $fql,
+        ));
     }
 
     function getFbInstance() {
