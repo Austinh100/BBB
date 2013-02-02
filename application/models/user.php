@@ -28,8 +28,8 @@ class User extends CI_Model {
     }
 	
 	function getName() {
-		$me = $this->facebook->api('/me');
-		return $me->name;
+        $user = $this->facebook->api('/me');
+		return $user['name'];
 	}
 
     function logURL() {
@@ -45,8 +45,7 @@ class User extends CI_Model {
     }
 
     function getFbProfilePic($fbID) {
-        return '<img src="https://graph.facebook.com/'
-            .$this->facebook->api("$fbID").'/picture">';
+        return 'https://graph.facebook.com/'.$this->facebook->api("$fbID").'/picture">';
     }
 
 }
