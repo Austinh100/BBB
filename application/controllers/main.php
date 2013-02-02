@@ -28,7 +28,10 @@ class Main extends CI_Controller {
 	public function result($user)
 	{
 		//Get data for $user and pass it to the result view:
-		$data = "";
+		$data['name'] = $this->fbapi->getName($user);
+        $data['likes'] = $this->fbapi->getLikedPageTitles($user);
+        $data['interests'];
+        //likes,interests
 		$this->load->view('result',$data);
 	}
 	
