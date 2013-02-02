@@ -55,18 +55,19 @@
 							var friends = <?php if($friends){echo $friends;}else{echo "{}";} ?>;
 							
 							var fname = [];
+							var assoch = {};
 							
 							for(var i = 0; i < friends.data.length; i++){
 								fname.push(friends.data[i].name);
+								assoch[friends.data[i].name] = friends.data[i].
 							}
-							console.log(fname);
 							
 							$("#friendname").typeahead({source: fname})
 							
 							
 							</script>
 							
-							<div class="find-button">Find Ideas</div>
+							<div id="goToResult" class="find-button">Find Ideas</div>
 						</div>
     				</div>
     				
