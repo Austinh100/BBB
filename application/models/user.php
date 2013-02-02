@@ -29,7 +29,7 @@ class User extends CI_Model {
 	
 	function getName() {
 		$me = $this->facebook->api('/me');
-		return $me->name
+		return $me->name;
 	}
 
     function logURL() {
