@@ -23,7 +23,7 @@
 
 		<script>
 			window.onload = function() {
-				var results = new Results(<? echo $likes ?>, <? echo $interests ?>, "", "");
+				var results = new Results(<? echo $likes ?>, <? echo $interests ?>);
 			}
 		</script>
 
@@ -46,22 +46,31 @@
 					<div style="margin-top: 15px; font-size: 0.6em;">
 						<a id="refButton" href="#">Refine Results</a>
 						<div id="refine" style="text-align: center; margin: 0px auto; display: none;">
-							<form class="form-horizontal" style="width: 300px; margin-left: 250px; margin-top: 20px;">
+							<form class="form-horizontal" action="#" style="width: 300px; margin-left: 250px; margin-top: 20px;">
 							  <div class="control-group">
-							    <label class="control-label" for="inputEmail" style="text-alrign: right;">Pinterest Username</label>
+							    <label class="control-label" for="pinterestInput" style="text-alrign: right;">Pinterest Username</label>
 							    <div class="controls">
 							      <input type="text" id="pinterestInput" placeholder="pinterest...">
 							    </div>
 							  </div>
 							  <div class="control-group">
-							    <label class="control-label" for="inputPassword">Etsy Username</label>
+							    <label class="control-label" for="etsyInput">Etsy Username</label>
 							    <div class="controls">
 							      <input type="text" id="etsyInput" placeholder="etsy...">
 							    </div>
 							  </div>
 							  <div class="control-group">
+								<label class="control-label" for="maxPrice">Max Price</label>
 							    <div class="controls">
-							      <button type="submit" class="btn">Save User Information</button>
+									<div class="input-prepend">
+									  <span class="add-on">$</span>
+									  <input id="maxPrice" type="text" style="width: 80px;">
+									</div>
+							    </div>
+							  </div>
+							  <div class="control-group">
+							    <div class="controls">
+							      <button type="submit" class="btn">Update</button>
 							    </div>
 							  </div>
 							</form>
