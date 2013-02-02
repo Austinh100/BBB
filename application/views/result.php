@@ -44,7 +44,10 @@
 				<div class="recommendation" id="recommendation">
 					Displaying Results for <i><? echo $name ?></i>
 					<div style="margin-top: 15px; font-size: 0.6em;">
-						Refine Results
+						<a href="#">Refine Results</a>
+						<div id="refine">
+							<div>Pinterest Username:<input></div>
+						</div>
 					</div>
 				</div>
 			</div>
