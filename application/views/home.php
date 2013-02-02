@@ -59,7 +59,7 @@
     					<br/><span class="name">Find A Gift</span> <br/>
     					<span class="transactions">Find the perfect gift for anybody you know.</span>
 						<div style="margin-top: 20px;">
-							<input id="friendname" type="text" data-provide="typeahead" class="search-query" placeholder="Enter Friend's Name..." style="width: 300px; padding: 15px; height: 40px; font-size: 1.3em;"/>
+							<input id="friendname" type="text" class="search-query" placeholder="Enter Friend's Name..." style="width: 300px; padding: 15px; height: 40px; font-size: 1.3em;"/>
 							
 							<script>
 							
@@ -67,9 +67,10 @@
 							
 							var fname = [];
 							
-							for(var x in friends){
-								fname.push(friends[x].name);
+							for(var i = 0; i < friends.data.length; i++){
+								fname.push(friends.data[i].name);
 							}
+							console.log(fname);
 							
 							$("#friendname").typeahead({source: fname})
 							
