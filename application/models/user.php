@@ -28,10 +28,12 @@ class User extends CI_Model {
     }
 
     function logURL() {
+        $params = array(
+            'scope' => 'friends_likes, friends_interests, read_stream'
+        );
         if($this->loggedIn())
-            return $this->facebook->getLogoutUrl();
+            return $this->facebook->getLogoutUrl($params);
         else {
-            $params = array('req_perms' => 'friend_likes,friend_interests,read_stream');
             return $this->facebook->getLoginUrl($params);
         }
 
