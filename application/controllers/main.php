@@ -30,7 +30,7 @@ class Main extends CI_Controller {
 		//Get data for $user and pass it to the result view:
 		$data['name'] = $this->fbapi->getName($user);
         $data['likes'] = $this->fbapi->getLikedPageTitles($user);
-        $data['interests'];
+        $data['interests'] = $this->fbapi->getInterests($user);
         //likes,interests
 		$this->load->view('result',$data);
 	}
