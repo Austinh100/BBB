@@ -23,7 +23,7 @@
 		
 		<script>
 			window.onload = function(){
-				var result = new Home();
+				var home = new Home();
 			}
 		</script>
         
@@ -59,7 +59,7 @@
 							
 							for(var i = 0; i < friends.data.length; i++){
 								fname.push(friends.data[i].name);
-								assoch[friends.data[i].name] = friends.data[i].id
+								assoch[friends.data[i].name.toLowerCase()] = friends.data[i].id
 							}
 							
 							$("#friendname").typeahead({source: fname})
