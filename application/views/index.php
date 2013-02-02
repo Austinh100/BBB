@@ -13,13 +13,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Gift Giving</title>
         
-        <link href="http://austinh100.com/bigbootybros/public/styles/bootstrap.css" rel="stylesheet" media="screen">
-		<link href="http://austinh100.com/bigbootybros/public/styles/main.css" rel="stylesheet">
-		<script src="http://austinh100.com/bigbootybros/public/js/jquery.js"></script>
-		<script src="http://austinh100.com/bigbootybros/public/js/bootstrap.min.js"></script>
-		<script src="http://austinh100.com/bigbootybros/public/js/App.js"></script>
+        <link href="https://giftfinder-bbbros.rhcloud.com/styles/bootstrap.css" rel="stylesheet" media="screen">
+		<link href="https://giftfinder-bbbros.rhcloud.com/styles/main.css" rel="stylesheet">
+		<script src="https://giftfinder-bbbros.rhcloud.com/js/jquery.js"></script>
+		<script src="https://giftfinder-bbbros.rhcloud.com/js/bootstrap.min.js"></script>
+		<script src="https://giftfinder-bbbros.rhcloud.com/js/App.js"></script>
 		
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
 		
 		<script>
 			window.onload = function(){
@@ -36,7 +36,7 @@
     	<!-- Contains everything in the website -->
     	<div class="container" id="splash">
     		<div class="header">
-    			<a href="index.html">Big Booty Bros</a>
+    			<a href="#">Big Booty Bros</a>
     		</div>
     		<!-- Description of the Product -->
     		<div class="row">
