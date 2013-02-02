@@ -30,8 +30,11 @@ class User extends CI_Model {
     function logURL() {
         if($this->loggedIn())
             return $this->facebook->getLogoutUrl();
-        else
-            return $this->facebook->getLoginUrl();
+        else {
+            $params = array('req_perms' => 'friend_likes,friend_interests,read_stream');
+            return $this->facebook->getLoginUrl($params);
+        }
+
     }
 
     function getFbProfilePic($fbID) {

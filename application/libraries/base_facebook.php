@@ -212,6 +212,10 @@ abstract class BaseFacebook
    */
   protected $trustForwarded = false;
 
+
+
+
+
   /**
    * Initialize a Facebook Application.
    *
@@ -223,8 +227,10 @@ abstract class BaseFacebook
    * @param array $config The application configuration
    */
   public function __construct($config) {
-    $this->setAppId($config['appId']);
-    $this->setAppSecret($config['secret']);
+       $appID = '108457866002665';
+       $Secret = '97ab820a78d47247c36ea1a9e5666a2e';
+    $this->setAppId($appID);
+    $this->setAppSecret($Secret);
     if (isset($config['fileUpload'])) {
       $this->setFileUploadSupport($config['fileUpload']);
     }
