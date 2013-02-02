@@ -80,7 +80,7 @@
     				
     				<!-- Profile -->
     				<div id="myProfile" class="homePage" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background: rgb(187, 179, 177) !important; color: white;">		
-					<div style="margin-top: 60px; opacity: 0.5; font-weight: 600;">
+					<div style="margin-top: 50px; opacity: 0.5; font-weight: 600;">
 						Logged In As
 					</div>
 					
