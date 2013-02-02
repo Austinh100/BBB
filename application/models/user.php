@@ -45,7 +45,7 @@ class User extends CI_Model {
     }
 
     function getFbProfilePic() {
-        return 'https://graph.facebook.com/'.$this->getName().'/picture">';
+        return 'https://graph.facebook.com/'.$this->facebook->getUser().'/picture">';
     }
 
 }
