@@ -23,7 +23,7 @@
 		
 		<script>
 			window.onload = function(){
-				var result = new Results();
+				var result = new Home();
 			}
 		</script>
         
