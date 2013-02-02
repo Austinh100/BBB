@@ -118,11 +118,10 @@ body {
 }
 
 .homePage {
-	background-color:white;
+	background-color: white;
 	height:300px;
 	width:auto;
 	text-align:center;
-	border-radius:10px;
 }
 .name {
 	font-size:175%;
