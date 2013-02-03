@@ -113,15 +113,15 @@ Results.prototype = {
 				console.log(this.etsy, this.rawEtsy);
 				
 				var testy = this.etsy;
-				if(testy.length >= 5){
-					testy.splice(5, testy.length-4);
+				if(testy.length >= 4){
+					testy.splice(4, testy.length-3);
 				}
 				
 				if(testy.length !== 0){
 					var block = $("<div>").addClass("etsy-block");
 					for(var i = 0; i < testy.length; i++){
 						console.log(this.rawEtsy[i]);
-						block.append($("<div>").html(this.rawEtsy[i].title));
+						block.append($("<a>", {href: "http://etsy.com/listing/" +this.rawEtsy[i].listing_id, target: "_blank"}).html(this.rawEtsy[i].title));
 					}
 					
 					//Render an Etsy block.

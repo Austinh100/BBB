@@ -159,6 +159,11 @@ body {
 	font-size: 1.5em;
 }
 
+.etsy a{
+	line-height: 1.5em;
+	color: white;
+}
+
 .image-right {
 	display: -webkit-box;
 	display: -moz-box;
