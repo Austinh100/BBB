@@ -50,7 +50,6 @@ Results.prototype = {
 				user: etsyUser
 			}
 		}).done((function(inSender){
-			console.log(inSender);
 			if(inSender && typeof inSender === "object"){
 				this.rawEtsy = inSender;
 				this.etsy = [];
@@ -160,7 +159,7 @@ Results.prototype = {
 				$("<div>").addClass("selling").html(state.product[state.number].ItemAttributes.Title).click(function(){
 					console.log(inSender);
 					that.states[inSender].number++;
-					that.addNext(inSender.state.number);
+					that.addNext(this.states[inSender].number);
 					//This should not do this. This should go to amazon.
 				})
 			).append($("<a>").html("View More...").click(function(){

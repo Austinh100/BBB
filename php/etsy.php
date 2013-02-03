@@ -1,5 +1,10 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');  
+header('Content-type: application/json');
+
+
+
 $user = $_GET["user"];
 
 // Get cURL resource
