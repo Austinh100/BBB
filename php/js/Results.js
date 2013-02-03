@@ -194,9 +194,9 @@ Results.prototype = {
 			
 			var price = state.product[state.number].OfferSummary && state.product[state.number].OfferSummary.LowestNewPrice && state.product[state.number].OfferSummary.LowestNewPrice.Amount;
 			
-			console.log(price, this.maxPrice, !price || this.maxPrice >= (100 / parseInt(price)));
+			console.log(price, this.maxPrice, !price || this.maxPrice >= (parseInt(price)/100));
 			
-			if(!price || this.maxPrice >= (100 / parseInt(price))){
+			if(!price || this.maxPrice >= (parseInt(price)/100)){
 				var r = state.right.append(
 					$("<div>").addClass("selling").append(
 						$("<div>").addClass("image-amazon").css("backgroundImage", "url(" + state.product[state.number].MediumImage.URL + ")")
