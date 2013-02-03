@@ -34,8 +34,6 @@ foreach($terms as $term){
 	}
 }
 
-echo json_encode($ret);
-
 function amazon($t){
 
 	$AWS_ACCESS_KEY_ID = "AKIAJ3VHRV6JT67WLIMQ";
