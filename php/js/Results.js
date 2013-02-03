@@ -191,7 +191,7 @@ Results.prototype = {
 					that.addNext(inSender);
 					//This should not do this. This should go to amazon.
 				}));
-			)
+			}
 		}
 	}
 }
