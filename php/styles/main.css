@@ -166,6 +166,12 @@ body {
 	-webkit-box-flex: 1;
 	-moz-box-flex: 1;
 	box-flex: 1;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
 }
 
 .image-amazon {
@@ -173,6 +179,7 @@ body {
 	height: 170px;
 	margin: -10px;
 	width: 170px;
+	margin-right: 10px;
 }
 
 .etsy-header {
