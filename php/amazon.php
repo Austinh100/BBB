@@ -51,6 +51,7 @@ function amazon($t){
 	$url_params = array('Operation'=>"ItemSearch",'Service'=>"AWSECommerceService",
 	 'AWSAccessKeyId'=>$AWS_ACCESS_KEY_ID,'AssociateTag'=>"mytag-20",
 	 'SearchIndex'=>"All",
+	 'ResponseGroup'=>"Medium",
 	 'Keywords'=>trim(urlencode($t)));
 
 	// Add the Timestamp

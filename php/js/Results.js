@@ -10,6 +10,8 @@ function Results(likes, interests) {
 	this.pinterest = [];
 	this.etsy = [];
 	
+	this.states = [0, 0, 0, 0, 0];
+	
 	this.analyze();
 }
 //TODO: Max Price
@@ -108,6 +110,10 @@ Results.prototype = {
 			renderInto.html(" ");
 			
 			for(var i = 0; i < 5; i++){
+				
+				//reset state:
+				this.states[i] = 0;
+				
 				var top = $("<div>").addClass("row");
 			
 				var left = $("<div>").addClass("span6").append(
@@ -120,13 +126,33 @@ Results.prototype = {
 				
 				var product = inSender[ret[i][0]];
 				
-				var right = $("<div>").addClass("span6").append(
-					$("<div>").addClass("selling")
-				)
+				
+				var that = this;
+				var right = $("<div>").addClass("span6");
+				right.state = i;
+				this.states[i] = {number: i, right: right, product: inSender[ret[i][0]]};
+				
+				right.addNext(i);
 				
 				top.append(left).append(right);
 				
 				renderInto.append(top);
+			},
+			
+			addNext: function(inSender){
+				console.log("Creating at" inSender);
+				var state = this.states[inSender];
+				var that = this;
+				console.log("SHOULD BE ADDING PRODUCT", state.product[state.number]);
+				state.right.append(
+					$("<div>").addClass("sellings").html(state.product[state.number].Title).click(function(inSender){
+						console.log(inSender);
+						that.states[inSender.state].number++;
+						that.addNext(inSender.state.number);
+					});
+				);
+				this.states[inSender].number++;
+				console.log(this);
 			}
 			
 		});
