@@ -25,7 +25,7 @@ Results.prototype = {
 				[],
 		        this.likes,
 		        this.interests,
-		        ["etsy"]
+		        []
 		];
 		var ret = bigArrayAnalysis(input);
 		//Keep it to 25:
@@ -36,6 +36,8 @@ Results.prototype = {
 		for(var i = 0; i < ret.length; i++){
 			req += ret[i][0] + ","
 		}
+		
+		console.log(req);
 		
 		//Kick off to data layer:
 		$.ajax("https://giftfinder-bbbros.rhcloud.com/amazon.php", {

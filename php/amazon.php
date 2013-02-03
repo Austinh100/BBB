@@ -25,6 +25,7 @@ class XmlToJson {
 $ret = array();
 
 $terms = explode(",", $_GET["terms"]);
+echo json_encode($terms);
 foreach($terms as $term){
 	$a = json_decode(amazon($term), true);
 	if($a && $a["Items"] && $a["Items"]["Item"]){
@@ -44,7 +45,7 @@ function amazon($t){
 	$url_params = array('Operation'=>"ItemSearch",'Service'=>"AWSECommerceService",
 	 'AWSAccessKeyId'=>$AWS_ACCESS_KEY_ID,'AssociateTag'=>"mytag-20",
 	 'SearchIndex'=>"All",
-	 'Keywords'=>$t);
+	 'Keywords'=>trim(urlencode($t)));
 
 	// Add the Timestamp
 	$url_params['Timestamp'] = gmdate("Y-m-d\TH:i:s.\\0\\0\\0\\Z", time());
