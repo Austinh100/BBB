@@ -129,8 +129,8 @@ Results.prototype = {
 							$("<div>").addClass("etsy-header").html("Etsy Favorites")
 						).append(block)
 					));
-				
-					console.log("ADDING ETSY");
+					
+					console.log(this.rawEtsy);
 				
 					renderInto.append(etsy);
 				}
@@ -173,7 +173,12 @@ Results.prototype = {
 		var that = this;
 		if(state.product && state.product[state.number]){
 			state.right.append(
-				$("<div>").addClass("selling").html("<div style='background-image: url(" + state.product[state.number].MediumImage.URL + ");' class='image-amazon' />" + "<div class='image-right'>" + state.product[state.number].ItemAttributes.Title + "</div>").click(function(){
+				
+				$("<div>").addClass("selling").append(
+					$("<div>").addClass("image-amazon").css("backgroundImage", "url(" + state.product[state.number].MediumImage.URL + ")")
+				).append(
+					$("<div>").addClass("image-right").html(state.product[state.number].ItemAttributes.Title)
+				).click(function(){
 					window.open(state.product[state.number].DetailPageURL, '_blank');
 				})
 			).append($("<a>").html("View More...").click(function(){
