@@ -179,6 +179,7 @@ Results.prototype = {
 			).append($("<a>").html("View More...").click(function(){
 				this.remove();
 				console.log(that.states, inSender, that.states[inSender]);
+				console.log("INCING: " + that.states[inSender].number);
 				that.states[inSender].number++;
 				that.addNext(inSender);
 				//This should not do this. This should go to amazon.
