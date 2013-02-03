@@ -11,7 +11,7 @@
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Gift Giving</title>
+		<title>Giftr</title>
 		
 		<link href="https://giftfinder-bbbros.rhcloud.com/styles/bootstrap.css" rel="stylesheet" media="screen">
 		<link href="https://giftfinder-bbbros.rhcloud.com/styles/main.css" rel="stylesheet">
@@ -19,7 +19,6 @@
 		<script src="https://giftfinder-bbbros.rhcloud.com/js/bootstrap.min.js"></script>
 		<script src="https://giftfinder-bbbros.rhcloud.com/js/Results.js"></script>
 		<script src="https://giftfinder-bbbros.rhcloud.com/js/Data.js"></script>
-		<script src="https://giftfinder-bbbros.rhcloud.com/js/etsy.js"></script>
 		
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
 
@@ -37,7 +36,7 @@
 		<div class="container">
 			
     		<div class="header">
-    			<a href="https://giftfinder-bbbros.rhcloud.com/">Big Booty Bros</a>
+    			<a href="https://giftfinder-bbbros.rhcloud.com/">Giftr</a>
     		</div>
 
 

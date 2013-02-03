@@ -11,7 +11,7 @@
    
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Gift Giving</title>
+        <title>Giftr</title>
         
         <link href="https://giftfinder-bbbros.rhcloud.com/styles/bootstrap.css" rel="stylesheet" media="screen">
 		<link href="https://giftfinder-bbbros.rhcloud.com/styles/main.css" rel="stylesheet">
@@ -36,7 +36,7 @@
     	<!-- Contains everything in the website -->
     	<div class="container" id="splash">
     		<div class="header">
-    			<a href="#">Big Booty Bros</a>
+    			<a href="#">Giftr</a>
     		</div>
     		<!-- Description of the Product -->
     		<div class="row">

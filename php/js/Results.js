@@ -22,6 +22,7 @@ Results.prototype = {
 		var user = $("#pinterestInput").val();
 		if(user.trim() === ""){
 			this._etsy();
+			return;
 		}
 		//Kick off to data layer:
 		$.ajax("https://giftfinder-bbbros.rhcloud.com/pinterest/pinterest.php", {
@@ -38,13 +39,32 @@ Results.prototype = {
 		var etsyUser = $("#etsyInput").val();
 		if(etsyUser.trim() === ""){
 			this.analyze();
+			return;
 		}
 		
-		Etsy(etsyUser, (function(inSender){
-			console.log(inSender);
-			this.etsy = inSender;
+		$.ajax("https://giftfinder-bbbros.rhcloud.com/etsy.php", {
+			method: "get",
+			data: {
+				user: etsyUser
+			}
+		}).done(function(inSender){
+			if(inSender && typeof inSender === "object"){
+				this.rawEtsy = inSender;
+				this.etsy = [];
+				for(var i = 0; i < inSender.length; i++){
+					this.etsy.push(inSender[i].title);
+				}
+				this.analyze();
+			}else{
+				this.rawEtsy = null;
+				this.etsy = [];
+				this.analyze();
+			}
+		}).fail(function(){
+			this.rawEtsy = null;
+			this.etsy = [];
 			this.analyze();
-		}).bind(this));
+		});
 	},
 	makeArray: function(obj){
 		var arr = [];
