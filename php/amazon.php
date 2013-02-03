@@ -1,7 +1,14 @@
 <?php
 header('Access-Control-Allow-Origin: *');  
-header('Cache-Control: no-cache, must-revalidate');
-header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+
+
+$expire=60*60*24*1;// seconds, minutes, hours, days
+header('Pragma: public');
+header('Cache-Control: maxage='.$expire);
+header('Expires: ' . gmdate('D, d M Y H:i:s', time()+$expire) . ' GMT');
+header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
+
+
 header('Content-type: application/json');
 
 class XmlToJson {
