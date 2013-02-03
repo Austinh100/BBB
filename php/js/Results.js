@@ -157,7 +157,7 @@ Results.prototype = {
 			state.right.append(
 				$("<div>").addClass("selling").html(state.product[state.number].ItemAttributes.Title).click(function(inSender){
 					console.log(inSender);
-					that.states[inSender.state].number++;
+					that.states[inSender].number++;
 					that.addNext(inSender.state.number);
 				})
 			).append($("<a>").html("View More...").click(function(){
