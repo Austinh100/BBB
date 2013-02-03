@@ -40,7 +40,7 @@ Results.prototype = {
 			this.analyze();
 		}
 		
-		getEtsy(etsyUser, (function(inSender){
+		Etsy(etsyUser, (function(inSender){
 			console.log(inSender);
 			this.etsy = inSender;
 			this.analyze();
