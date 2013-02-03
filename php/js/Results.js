@@ -173,7 +173,7 @@ Results.prototype = {
 		var that = this;
 		if(state.product && state.product[state.number]){
 			state.right.append(
-				$("<div>").addClass("selling").html("<img src='" + state.product[state.number].MediumImage.URL + "' height='160' width='160' />" + state.product[state.number].ItemAttributes.Title).click(function(){
+				$("<div>").addClass("selling").html("<div style='background-image: url(" + state.product[state.number].MediumImage.URL + ");' class='image-amazon' />" + "<div class='image-right'>" + state.product[state.number].ItemAttributes.Title + "</div>").click(function(){
 					window.open(state.product[state.number].DetailPageURL, '_blank');
 				})
 			).append($("<a>").html("View More...").click(function(){

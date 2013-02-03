@@ -89,16 +89,6 @@ body {
 }
 
 .hit {
-	display: -webkit-box;
-	display: -moz-box;
-	display: box;
-	-webkit-box-align: center;
-	-moz-box-align: center;
-	box-align: center;
-	-webkit-box-pack: center;
-	-moz-box-pack: center;
-	box-pack: center;
-	
 	padding: 10px;
 	background-color: rgba(19, 96, 151, 0.8);
 	margin-top:10px;
@@ -113,6 +103,14 @@ body {
 	position: absolute;
 }
 .hit-label {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	
+	-webkit-box-orient: horizontal;
+	box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	
 	font-size: 3em;
 	line-height: 1em;
 	font-family: 'Open Sans', sans-serif;
@@ -121,16 +119,7 @@ body {
 	color: white;
 }
 
-.selling {
-	display: -webkit-box;
-	display: -moz-box;
-	display: box;
-	-webkit-box-align: center;
-	-moz-box-align: center;
-	box-align: center;
-	-webkit-box-pack: center;
-	-moz-box-pack: center;
-	box-pack: center;
+.selling {	
 	text-align: center;
 	font-size: 1.5em;
 	font-family: 'Open Sans', sans-serif;
@@ -146,12 +135,13 @@ body {
 	display: -moz-box;
 	display: box;
 	-webkit-box-align: center;
-	font-family: 'Open Sans', sans-serif;
 	-moz-box-align: center;
 	box-align: center;
 	-webkit-box-pack: center;
 	-moz-box-pack: center;
 	box-pack: center;
+	
+	font-family: 'Open Sans', sans-serif;
 	
 	padding: 10px;
 	background-color: rgba(19, 96, 151, 0.4);
@@ -159,6 +149,22 @@ body {
 	height:150px;
 	
 	font-size: 1.5em;
+}
+
+.image-right {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+}
+
+.image-amazon {
+	background-size: cover;
+	height: 170px;
+	margin: -10px;
+	width: 170px;
 }
 
 .etsy-header {

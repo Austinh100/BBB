@@ -31,7 +31,7 @@ class XmlToJson {
 
 $ret = array();
 
-$terms = explode(",", $_GET["terms"]);
+$terms = explode(",", strtolower($_GET["terms"]));
 foreach($terms as $term){
 	$a = json_decode(amazon($term), true);
 	if($a && $a["Items"] && $a["Items"]["Item"]){
@@ -52,6 +52,7 @@ function amazon($t){
 	 'AWSAccessKeyId'=>$AWS_ACCESS_KEY_ID,'AssociateTag'=>"mytag-20",
 	 'SearchIndex'=>"All",
 	 'ResponseGroup'=>"Medium",
+	 'MerchantId' => "All",
 	 'Keywords'=>trim(urlencode($t)));
 
 	// Add the Timestamp
