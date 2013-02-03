@@ -34,6 +34,6 @@ function findAllUserFavoriteListings(data) {
         }
 		_etsyCallback(listings);
     } else {
-        alert(data.error);
+        _etsyCallback([]);
     }
 }
