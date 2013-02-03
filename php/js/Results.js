@@ -180,7 +180,7 @@ Results.prototype = {
 				this.remove();
 				console.log(that.states, inSender, that.states[inSender]);
 				console.log("INCING: " + that.states[inSender].number);
-				that.states[inSender].number++;
+				that.states[inSender].number = that.states[inSender].number+1;
 				that.addNext(inSender);
 				//This should not do this. This should go to amazon.
 			}));
