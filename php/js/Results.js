@@ -172,10 +172,11 @@ Results.prototype = {
 		var state = this.states[inSender];
 		var that = this;
 		if(state.product && state.product[state.number]){
+			console.log("adding";)
 			state.right.append(
-				
 				$("<div>").addClass("selling").append(
-					$("<div>").addClass("image-amazon").css("backgroundImage", "url(" + state.product[state.number].MediumImage.URL + ")")
+					/*$("<div>").addClass("image-amazon").css("backgroundImage", "url(" + state.product[state.number].MediumImage.URL + ")")*/
+					$("<div>").html("The Image")
 				).append(
 					$("<div>").addClass("image-right").html(state.product[state.number].ItemAttributes.Title)
 				).click(function(){
@@ -183,13 +184,10 @@ Results.prototype = {
 				})
 			).append($("<a>").html("View More...").click(function(){
 				this.remove();
-				console.log(that.states, inSender, that.states[inSender]);
-				console.log("INCING: " + that.states[inSender].number);
-				that.states[inSender].number = that.states[inSender].number;
+				that.states[inSender].number++;
 				that.addNext(inSender);
 				//This should not do this. This should go to amazon.
 			}));
-			this.states[inSender].number++;
 		}
 	}
 }
