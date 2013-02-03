@@ -22,7 +22,7 @@
  
     # Enforce NO www
     RewriteCond %{HTTP_HOST} ^www [NC]
-    RewriteRule ^(.*)$ http://bbb.austinh100.com/$1 [L,R=301]
+    RewriteRule ^(.*)$ https://giftfinder-bbbros.rhcloud.com/$1 [L,R=301]
  
     ###
  
