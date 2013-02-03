@@ -175,8 +175,7 @@ Results.prototype = {
 			console.log("adding");
 			state.right.append(
 				$("<div>").addClass("selling").append(
-					/*$("<div>").addClass("image-amazon").css("backgroundImage", "url(" + state.product[state.number].MediumImage.URL + ")")*/
-					$("<div>").html("The Image")
+					$("<div>").addClass("image-amazon").css("backgroundImage", "url(" + state.product[state.number].MediumImage.URL + ")")
 				).append(
 					$("<div>").addClass("image-right").html(state.product[state.number].ItemAttributes.Title)
 				).click(function(){
