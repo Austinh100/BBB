@@ -42,9 +42,9 @@
 		    		<div class="header">
 		    			<a href="#">Giftr</a>
 		    		</div>
-    				<p>
+    				<div style="margin-top: 50px;">
 						Hey, we understand. Buying gifts for people is hard. Giftr uses the power of social media to match you with the perfect gift. Log into Facebok and start searching now.
-    				</p>
+					</div>
     			</div>
     			
     			
