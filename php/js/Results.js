@@ -102,7 +102,7 @@ Results.prototype = {
 			data: {
 				terms: req
 			}
-		}).done(function(inSender, inEvent){
+		}).done((function(inSender, inEvent){
 			
 			
 			var renderInto = $("#renderInto");
@@ -148,7 +148,7 @@ Results.prototype = {
 				renderInto.append(top);
 			}
 			
-		});
+		}).bind(this));
 	},
 	addNext: function(inSender){
 		console.log("Creating at", inSender);
