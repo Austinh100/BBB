@@ -19,6 +19,7 @@
 		<script src="https://giftfinder-bbbros.rhcloud.com/js/bootstrap.min.js"></script>
 		<script src="https://giftfinder-bbbros.rhcloud.com/js/Results.js"></script>
 		<script src="https://giftfinder-bbbros.rhcloud.com/js/Data.js"></script>
+		<script src="https://giftfinder-bbbros.rhcloud.com/js/etsy.js"></script>
 		
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
 

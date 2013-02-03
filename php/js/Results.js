@@ -12,10 +12,16 @@ function Results(likes, interests) {
 	
 	this.analyze();
 }
-
+//TODO: Max Price
 Results.prototype = {
 	update: function(){
+		
+	},
+	_pinterest: function(){
 		var user = $("#pinterestInput").val();
+		if(user.trim() === ""){
+			this._etsy();
+		}
 		//Kick off to data layer:
 		$.ajax("https://giftfinder-bbbros.rhcloud.com/pinterest/pinterest.php", {
 			method: "get",
@@ -23,11 +29,20 @@ Results.prototype = {
 				user: user
 			}
 		}).done((function(inSender){
-			console.log(inSender);
-			this.pinterest = inSender;
+			this.pinterest = inSender || [];
+			this._etsy();
+		}).bind(this));
+	},
+	_etsy: function(){
+		var etsyUser = $("#etsyInput").val();
+		if(etsyUser.trim() === ""){
+			this.analyze();
+		}
+		
+		getEtsy(etsyUser, (function(inSender){
+			this.etsy = inSender;
 			this.analyze();
 		}).bind(this));
-		//TODO: Top Prices:
 	},
 	makeArray: function(obj){
 		var arr = [];
@@ -81,7 +96,6 @@ Results.prototype = {
 				);
 				
 				var product = inSender[ret[i][0]];
-				console.log(product);
 				
 				var right = $("<div>").addClass("span6").append(
 					$("<div>").addClass("selling")
