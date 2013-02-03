@@ -39,6 +39,8 @@ Results.prototype = {
 			this.analyze();
 		}
 		
+		console.log(etsyUser);
+		
 		getEtsy(etsyUser, (function(inSender){
 			console.log(inSender);
 			this.etsy = inSender;
