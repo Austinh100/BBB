@@ -109,9 +109,12 @@ Results.prototype = {
 			renderInto.html(" ");
 			
 			if(this.etsy && this.rawEtsy && this.etsy.length > 0){
+				
+				console.log(this.etsy, this.rawEtsy);
+				
 				var testy = this.etsy;
 				if(testy.length >= 5){
-					ret.splice(5, testy.length-4);
+					testy.splice(5, testy.length-4);
 				}
 				
 				if(testy.length !== 0){
@@ -129,11 +132,10 @@ Results.prototype = {
 							$("<div>").addClass("etsy-header").html("Etsy Favorites")
 						).append(block)
 					));
-					
-					console.log(this.rawEtsy);
 				
 					renderInto.append(etsy);
 				}
+			}
 			
 			
 			for(var i = 0; i < 5; i++){
