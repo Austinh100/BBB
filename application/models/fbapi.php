@@ -19,7 +19,7 @@ class FBApi extends CI_Model {
 
     function getInterests($user) {
         $user = $this->facebook->api('/'.$user.'/interests');
-        return $user;
+        return json_encode($user);
     }
 
     function getFbInstance() {
