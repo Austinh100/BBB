@@ -151,19 +151,20 @@ Results.prototype = {
 		}).bind(this));
 	},
 	addNext: function(inSender){
-		console.log("Creating at", inSender);
 		var state = this.states[inSender];
 		var that = this;
-		console.log("About to read" + state.number + "from product" + state.product);
-		console.log("SHOULD BE ADDING PRODUCT", state.product[state.number]);
-		state.right.append(
-			$("<div>").addClass("sellings").html(state.product[state.number].ItemAttributes.Title).click(function(inSender){
-				console.log(inSender);
-				that.states[inSender.state].number++;
-				that.addNext(inSender.state.number);
-			}).append($("<a>").html("View More..."))
-		);
-		this.states[inSender].number++;
-		console.log(this);
+		if(state.product && state.product[state.number]){
+			state.right.append(
+				$("<div>").addClass("selling").html(state.product[state.number].ItemAttributes.Title).click(function(inSender){
+					console.log(inSender);
+					that.states[inSender.state].number++;
+					that.addNext(inSender.state.number);
+				})
+			).append($("<a>").html("View More...").click(function(){
+					//TODO:
+			});
+			this.states[inSender].number++;
+			console.log(this);
+		}
 	}
 }
