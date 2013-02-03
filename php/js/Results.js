@@ -17,6 +17,12 @@ function Results(likes, interests) {
 //TODO: Max Price
 Results.prototype = {
 	update: function(){
+		//Get max price:
+		this.maxPrice = $("#maxPrice").val();
+		this.maxPrice = Math.round(parseFloat(this.maxPrice));
+		if(!this.maxPrice || this.maxPrice < 0){
+			this.maxPrice = Infinity;
+		}
 		//Kick off updates:
 		this._pinterest();
 	},
@@ -117,11 +123,20 @@ Results.prototype = {
 					testy.splice(4, testy.length-3);
 				}
 				
+				for(var i = 0; i < this.rawEtsy.length; i++){
+					if(this.maxPrice >= parseInt(this.rawEtsy.price[i])){
+						this.rawEtsy[i].inPrice = true;
+					}else{
+						this.rawEtsy[i].inPrice = false;
+					}
+				}
+				
 				if(testy.length !== 0){
 					var block = $("<div>").addClass("etsy-block");
 					for(var i = 0; i < testy.length; i++){
-						console.log(this.rawEtsy[i]);
-						block.append($("<a>", {href: "http://etsy.com/listing/" +this.rawEtsy[i].listing_id, target: "_blank"}).html(this.rawEtsy[i].title));
+						if(this.rawEtsy[i].inPrice){
+							block.append($("<div>").append($("<a>", {href: "http://etsy.com/listing/" +this.rawEtsy[i].listing_id, target: "_blank"}).html(this.rawEtsy[i].title)));
+						}
 					}
 					
 					//Render an Etsy block.

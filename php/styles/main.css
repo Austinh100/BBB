@@ -164,6 +164,10 @@ body {
 	color: white;
 }
 
+.etsy a:hover{
+	text-decoration: none;
+}
+
 .image-right {
 	display: -webkit-box;
 	display: -moz-box;
