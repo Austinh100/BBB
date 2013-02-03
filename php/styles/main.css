@@ -89,12 +89,23 @@ body {
 }
 
 .hit {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
+	
 	padding: 10px;
 	background-color: rgba(19, 96, 151, 0.8);
 	margin-top:10px;
 	height:150px;
 }
 .hit-header {
+	display: block;
 	font-size: 1.6em;
 	font-family: 'Roboto Condensed', sans-serif;
 	color: rgba(255,255,255,0.5);
@@ -103,10 +114,10 @@ body {
 }
 .hit-label {
 	font-size: 3em;
+	line-height: 1em;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	text-align: center;
-	margin-top: 42px;
 	color: white;
 }
 
