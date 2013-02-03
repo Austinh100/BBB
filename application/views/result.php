@@ -83,6 +83,7 @@
 							});
 							$("#update").click(function(){
 								results.update();
+								$("#refine").stop(true, false).slideToggle("slow");
 							});
 						});
 						</script>
@@ -92,7 +93,7 @@
 
 			<!-- Here contains all of the hits we get -->
 			<div class="container" id="renderInto" style="margin-top:10px;">
-				<div style="text-align: center; display: block; opacity: 0.5; font-size: 1.2; font-style: italic; margin: 20px auto;"> Loading... </div>
+				
 			</div>
 		
 			<br/>

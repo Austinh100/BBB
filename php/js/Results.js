@@ -22,11 +22,11 @@ Results.prototype = {
 			data: {
 				user: user
 			}
-		}).done(function(inSender){
+		}).done((function(inSender){
 			console.log(inSender);
 			this.pinterest = inSender;
 			this.analyze();
-		});
+		}).bind(this));
 		//TODO: Top Prices:
 	},
 	makeArray: function(obj){
@@ -37,6 +37,9 @@ Results.prototype = {
 		return arr;
 	},
 	analyze: function(){
+		
+		$("#renderInto").html('<div style="text-align: center; display: block; opacity: 0.5; font-size: 1.2; font-style: italic; margin: 20px auto;"> Loading... </div>');
+		
 		var input = [
 				this.pinterest,
 		        this.likes,
