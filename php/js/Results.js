@@ -127,7 +127,7 @@ Results.prototype = {
 					etsy.append($("<div>").addClass("span12").append(
 						$("<div>").addClass("etsy").append(
 							$("<div>").addClass("etsy-header").html("Etsy Favorites")
-						)
+						).append(block)
 					));
 				
 					console.log("ADDING ETSY");
