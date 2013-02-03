@@ -161,7 +161,7 @@ Results.prototype = {
 				})
 			).append($("<a>", {href: "#"}).html("View More...").click(function(){
 				that.states[inSender].number++;
-				that.addNext(that.states[inSender].number);
+				that.addNext(inSender);
 				//This should not do this. This should go to amazon.
 			}));
 			this.states[inSender].number++;
