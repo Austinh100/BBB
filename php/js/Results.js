@@ -111,7 +111,7 @@ Results.prototype = {
 			if(this.etsy && this.rawEtsy && this.etsy.length > 0){
 				var testy = jQuery.extend({}, this.etsy);
 				if(testy.length >= 5){
-					ret.splice(5, ret.length-4);
+					ret.splice(5, testy.length-4);
 				}
 				
 				if(testy.length !== 0){
