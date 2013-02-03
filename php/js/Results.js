@@ -112,7 +112,7 @@ Results.prototype = {
 				//Render an Etsy block.
 				var etsy = $("<div>").addClass("row");
 				
-				etsy.append($("<div>").addClass("etsy-header").addContent("Etsy Favorites"));
+				etsy.append($("<div>").addClass("etsy-header").html("Etsy Favorites"));
 				
 				console.log("ADDING ETSY");
 				
