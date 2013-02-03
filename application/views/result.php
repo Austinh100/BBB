@@ -47,7 +47,7 @@
 					<div style="margin-top: 15px; font-size: 0.6em;">
 						<a id="refButton" href="#">Refine Results</a>
 						<div id="refine" style="text-align: center; margin: 0px auto; display: none;">
-							<form class="form-horizontal" action="#" style="width: 300px; margin-left: 250px; margin-top: 20px;">
+							<div class="form-horizontal" style="width: 300px; margin-left: 250px; margin-top: 20px;">
 							  <div class="control-group">
 							    <label class="control-label" for="pinterestInput" style="text-alrign: right;">Pinterest Username</label>
 							    <div class="controls">
@@ -71,10 +71,10 @@
 							  </div>
 							  <div class="control-group">
 							    <div class="controls">
-							      <button id="update" type="submit" class="btn">Update</button>
+							      <button id="update" class="btn">Update</button>
 							    </div>
 							  </div>
-							</form>
+							</div>
 						</div>
 						<script>
 						$(function(){
