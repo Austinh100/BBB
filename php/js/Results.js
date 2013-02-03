@@ -47,7 +47,8 @@ Results.prototype = {
 			data: {
 				user: etsyUser
 			}
-		}).done(function(inSender){
+		}).done((function(inSender){
+			console.log(inSender);
 			if(inSender && typeof inSender === "object"){
 				this.rawEtsy = inSender;
 				this.etsy = [];
@@ -60,11 +61,11 @@ Results.prototype = {
 				this.etsy = [];
 				this.analyze();
 			}
-		}).fail(function(){
+		}).bind(this)).fail((function(){
 			this.rawEtsy = null;
 			this.etsy = [];
 			this.analyze();
-		});
+		}).bind(this));
 	},
 	makeArray: function(obj){
 		var arr = [];
