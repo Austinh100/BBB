@@ -138,6 +138,7 @@ body {
 	background-color: rgba(19, 96, 151, 0.1);
 	height:150px;
 	margin-top:10px;
+	cursor: pointer;
 }
 
 .etsy {

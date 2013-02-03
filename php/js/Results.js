@@ -109,18 +109,31 @@ Results.prototype = {
 			renderInto.html(" ");
 			
 			if(this.etsy && this.rawEtsy && this.etsy.length > 0){
-				//Render an Etsy block.
-				var etsy = $("<div>").addClass("row");
+				var testy = jQuery.extend({}, this.etsy);
+				if(testy.length >= 5){
+					ret.splice(5, ret.length-4);
+				}
 				
-				etsy.append($("<div>").addClass("span12").append(
-					$("<div>").addClass("etsy").append(
-						$("<div>").addClass("etsy-header").html("Etsy Favorites")
-					)
-				));
+				if(testy.length !== 0){
+					var block = $("<div>").addClass("etsy-block");
+					for(var i = 0; i < testy.length; i++){
+						console.log(this.rawEtsy[i]);
+						block.append($("<div>").html(this.rawEtsy[i].title));
+					}
+					
+					//Render an Etsy block.
+					var etsy = $("<div>").addClass("row");
+					
+					etsy.append($("<div>").addClass("span12").append(
+						$("<div>").addClass("etsy").append(
+							$("<div>").addClass("etsy-header").html("Etsy Favorites")
+						)
+					));
 				
-				console.log("ADDING ETSY");
+					console.log("ADDING ETSY");
 				
-				renderInto.append(etsy);
+					renderInto.append(etsy);
+				}
 			}
 			
 			for(var i = 0; i < 5; i++){
@@ -158,7 +171,6 @@ Results.prototype = {
 	addNext: function(inSender){
 		var state = this.states[inSender];
 		var that = this;
-		console.log(state.product, state.number);
 		if(state.product && state.product[state.number]){
 			state.right.append(
 				$("<div>").addClass("selling").html(state.product[state.number].ItemAttributes.Title).click(function(){
@@ -166,12 +178,12 @@ Results.prototype = {
 				})
 			).append($("<a>").html("View More...").click(function(){
 				this.remove();
+				console.log(that.states, inSender, that.states[inSender]);
 				that.states[inSender].number++;
 				that.addNext(inSender);
 				//This should not do this. This should go to amazon.
 			}));
 			this.states[inSender].number++;
-			console.log(this);
 		}
 	}
 }
