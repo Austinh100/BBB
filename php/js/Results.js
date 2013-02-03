@@ -154,16 +154,17 @@ Results.prototype = {
 	addNext: function(inSender){
 		var state = this.states[inSender];
 		var that = this;
+		console.log(state.product[state.number]);
 		if(state.product && state.product[state.number]){
 			state.right.append(
 				$("<div>").addClass("selling").html(state.product[state.number].ItemAttributes.Title).click(function(){
-					console.log(inSender);
-					that.states[inSender].number++;
-					that.addNext(this.states[inSender].number);
-					//This should not do this. This should go to amazon.
+					window.open(state.product[state.number].DetailPageURL, '_blank');
 				})
 			).append($("<a>").html("View More...").click(function(){
-					//TODO:
+				console.log(inSender);
+				that.states[inSender].number++;
+				that.addNext(this.states[inSender].number);
+				//This should not do this. This should go to amazon.
 			}));
 			this.states[inSender].number++;
 			console.log(this);
