@@ -15,7 +15,8 @@ function Results(likes, interests) {
 //TODO: Max Price
 Results.prototype = {
 	update: function(){
-		
+		//Kick off updates:
+		this._pinterest();
 	},
 	_pinterest: function(){
 		var user = $("#pinterestInput").val();
@@ -38,8 +39,6 @@ Results.prototype = {
 		if(etsyUser.trim() === ""){
 			this.analyze();
 		}
-		
-		console.log(etsyUser);
 		
 		getEtsy(etsyUser, (function(inSender){
 			console.log(inSender);
