@@ -142,7 +142,7 @@ Results.prototype = {
 		});
 	},
 	addNext: function(inSender){
-		console.log("Creating at" inSender);
+		console.log("Creating at", inSender);
 		var state = this.states[inSender];
 		var that = this;
 		console.log("SHOULD BE ADDING PRODUCT", state.product[state.number]);
