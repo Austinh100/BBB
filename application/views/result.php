@@ -71,7 +71,7 @@
 							  </div>
 							  <div class="control-group">
 							    <div class="controls">
-							      <button type="submit" class="btn">Update</button>
+							      <button id="update" type="submit" class="btn">Update</button>
 							    </div>
 							  </div>
 							</form>
@@ -80,6 +80,9 @@
 						$(function(){
 							$("#refButton").click(function(){
 								$("#refine").stop(true, false).slideToggle("slow");
+							});
+							$("#update").click(function(){
+								results.update();
 							});
 						});
 						</script>

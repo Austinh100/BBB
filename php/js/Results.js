@@ -5,12 +5,28 @@
 function Results(likes, interests) {
 	this.likes = this.makeArray(likes);
 	this.interests = this.makeArray(interests.data);
+	
+	//These are both additional filters:
+	this.pinterest = [];
+	this.etsy = [];
+	
 	this.analyze();
 }
 
 Results.prototype = {
 	update: function(){
-		//TODO: Get other creds.
+		var user = $("#pinterestInput").val();
+		//Kick off to data layer:
+		$.ajax("https://giftfinder-bbbros.rhcloud.com/pinterest/pinterest.php", {
+			method: "get",
+			data: {
+				user: user
+			}
+		}).done(function(inSender){
+			console.log(inSender);
+			this.pinterest = inSender;
+			this.analyze();
+		});
 		//TODO: Top Prices:
 	},
 	makeArray: function(obj){
@@ -22,10 +38,10 @@ Results.prototype = {
 	},
 	analyze: function(){
 		var input = [
-				[],
+				this.pinterest,
 		        this.likes,
 		        this.interests,
-		        []
+		        this.etsy
 		];
 		var ret = bigArrayAnalysis(input);
 		//Keep it to 25:
