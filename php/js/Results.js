@@ -154,9 +154,10 @@ Results.prototype = {
 		console.log("Creating at", inSender);
 		var state = this.states[inSender];
 		var that = this;
+		console.log("About to read" + state.number + "from product" + state.product);
 		console.log("SHOULD BE ADDING PRODUCT", state.product[state.number]);
 		state.right.append(
-			$("<div>").addClass("sellings").html(state.product[state.number].Title).click(function(inSender){
+			$("<div>").addClass("sellings").html(state.product[state.number].ItemAttributes.Title).click(function(inSender){
 				console.log(inSender);
 				that.states[inSender.state].number++;
 				that.addNext(inSender.state.number);
