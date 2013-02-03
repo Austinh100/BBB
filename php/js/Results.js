@@ -141,7 +141,7 @@ Results.prototype = {
 				right.state = i;
 				this.states[i] = {number: i, right: right, product: inSender[ret[i][0]]};
 				
-				right.addNext(i);
+				this.addNext(i);
 				
 				top.append(left).append(right);
 				
