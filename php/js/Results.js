@@ -190,8 +190,7 @@ Results.prototype = {
 		var that = this;
 		if(state.product && state.product[state.number]){
 			
-			var price = state.product[state.number].OfferSummary.LowestNewPrice && state.product[state.number].OfferSummary.LowestNewPrice.Amount;
-			console.log(price);
+			var price = state.product[state.number].OfferSummary && state.product[state.number].OfferSummary.LowestNewPrice && state.product[state.number].OfferSummary.LowestNewPrice.Amount;
 			
 			if(!price || this.maxPrice >= (100 / parseInt(price))){
 				var r = state.right.append(
