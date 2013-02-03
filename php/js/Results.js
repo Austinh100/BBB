@@ -208,12 +208,13 @@ Results.prototype = {
 				)
 				
 				if(state.product && state.product[state.number+1]){
-					r.append($("<a>").html("View More...").click(function(){
-						this.remove();
+					var el = $("<a>").html("View More...").click(function(){
+						el.remove();
 						that.states[inSender].number++;
 						that.addNext(inSender);
 						//This should not do this. This should go to amazon.
 					}));
+					r.append(el);
 				}
 			}else{
 				console.log("adding next");
