@@ -74,25 +74,18 @@ Results.prototype = {
 			
 				var left = $("<div>").addClass("span6").append(
 					$("<div>").addClass("hit").append(
-						$("<div>").addClass("hit-header").html("Because They Liked")
+						$("<div>").addClass("hit-header").html("Because They Like")
 					).append(
 						$("<div>").addClass("hit-label").html(ret[i][0])
 					)
 				);
-				//We show the top three results for the top like/interest/pinterest.
-				if(i === 0){
-					var right = $("<div>").addClass("span6").append(
-						$("<div>").addClass("selling")
-					).append(
-						$("<div>").addClass("selling")
-					).append(
-						$("<div>").addClass("selling")
-					)
-				}else{
-					var right = $("<div>").addClass("span6").append(
-						$("<div>").addClass("selling")
-					)
-				}
+				
+				var product = inSender[ret[i][0]];
+				console.log(product);
+				
+				var right = $("<div>").addClass("span6").append(
+					$("<div>").addClass("selling")
+				)
 				
 				top.append(left).append(right);
 				
