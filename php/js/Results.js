@@ -113,7 +113,9 @@ Results.prototype = {
 				var etsy = $("<div>").addClass("row");
 				
 				etsy.append($("<div>").addClass("span12").append(
-					$("<div>").addClass("etsy-header").html("Etsy Favorites")
+					$("<div>").addClass("etsy").append(
+						$("<div>").addClass("etsy-header").html("Etsy Favorites")
+					)
 				));
 				
 				console.log("ADDING ETSY");
@@ -156,6 +158,7 @@ Results.prototype = {
 	addNext: function(inSender){
 		var state = this.states[inSender];
 		var that = this;
+		console.log(state.product, state.number);
 		if(state.product && state.product[state.number]){
 			state.right.append(
 				$("<div>").addClass("selling").html(state.product[state.number].ItemAttributes.Title).click(function(){
