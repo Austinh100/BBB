@@ -109,6 +109,15 @@ Results.prototype = {
 			
 			renderInto.html(" ");
 			
+			if(this.etsy && this.rawEtsy && this.etsy.length > 0){
+				//Render an Etsy block.
+				var etsy = $("<div>").addClass("row");
+				
+				etsy.append($("<div>").addClass("etsy-header").addContent("Etsy Favorites"));
+				
+				renderInto.append(etsy);
+			}
+			
 			for(var i = 0; i < 5; i++){
 				
 				//reset state:
@@ -151,7 +160,7 @@ Results.prototype = {
 				console.log(inSender);
 				that.states[inSender.state].number++;
 				that.addNext(inSender.state.number);
-			});
+			}).append($("<a>").html("View More..."))
 		);
 		this.states[inSender].number++;
 		console.log(this);

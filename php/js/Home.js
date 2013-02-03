@@ -9,7 +9,6 @@ function Home(a) {
 Home.prototype = {
 
 	result: function() {
-		console.log("Clicked!");
 		var val = document.getElementById("friendname").value.toLowerCase();
 		if(assoch[val]){
 			window.location = "https://giftfinder-bbbros.rhcloud.com/main/result/" + assoch[val];
