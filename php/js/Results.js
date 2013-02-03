@@ -12,6 +12,8 @@ function Results(likes, interests) {
 	
 	this.states = [0, 0, 0, 0, 0];
 	
+	this.maxPrice = Infinity;
+	
 	this.analyze();
 }
 //TODO: Max Price
