@@ -45,8 +45,8 @@ Results.prototype = {
 			data: {
 				terms: req
 			}
-		}).done(function(inSender){
-			console.log(inSender);
+		}).done(function(inSender, inEvent){
+			console.log(inSender, inEvent);
 		});
 	}
 }
