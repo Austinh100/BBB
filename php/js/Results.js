@@ -172,7 +172,7 @@ Results.prototype = {
 		var state = this.states[inSender];
 		var that = this;
 		if(state.product && state.product[state.number]){
-			console.log("adding";)
+			console.log("adding");
 			state.right.append(
 				$("<div>").addClass("selling").append(
 					/*$("<div>").addClass("image-amazon").css("backgroundImage", "url(" + state.product[state.number].MediumImage.URL + ")")*/
