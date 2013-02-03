@@ -193,27 +193,29 @@ Results.prototype = {
 			var price = state.product[state.number].OfferSummary.LowestNewPrice && state.product[state.number].OfferSummary.LowestNewPrice.Amount;
 			console.log(price);
 			
-			if(price && this.maxPrice >= (100 / parseInt(price))){
-				console.log("Out of range");
-			}
-			
-			var r = state.right.append(
-				$("<div>").addClass("selling").append(
-					$("<div>").addClass("image-amazon").css("backgroundImage", "url(" + state.product[state.number].MediumImage.URL + ")")
-				).append(
-					$("<div>").addClass("image-right").html(state.product[state.number].ItemAttributes.Title)
-				).click(function(){
-					window.open(state.product[state.number].DetailPageURL, '_blank');
-				})
-			)
-			//TODO: Max Price:
-			if(state.product && state.product[state.numer+1]){
-				r.append($("<a>").html("View More...").click(function(){
-					this.remove();
-					that.states[inSender].number++;
-					that.addNext(inSender);
-					//This should not do this. This should go to amazon.
-				}));
+			if(!price || this.maxPrice >= (100 / parseInt(price))){
+				var r = state.right.append(
+					$("<div>").addClass("selling").append(
+						$("<div>").addClass("image-amazon").css("backgroundImage", "url(" + state.product[state.number].MediumImage.URL + ")")
+					).append(
+						$("<div>").addClass("image-right").html(state.product[state.number].ItemAttributes.Title)
+					).click(function(){
+						window.open(state.product[state.number].DetailPageURL, '_blank');
+					})
+				)
+				//TODO: Max Price:
+				if(state.product && state.product[state.numer+1] && (!price || this.maxPrice >= (100 / parseInt(price)))){
+					r.append($("<a>").html("View More...").click(function(){
+						this.remove();
+						that.states[inSender].number++;
+						that.addNext(inSender);
+						//This should not do this. This should go to amazon.
+					}));
+				}
+			}else{
+				//We're out of price range, try to fetch the next result.
+				this.states[inSender].number++;
+				this.addNext(inSender);
 			}
 		}
 	}
