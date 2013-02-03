@@ -112,7 +112,9 @@ Results.prototype = {
 				//Render an Etsy block.
 				var etsy = $("<div>").addClass("row");
 				
-				etsy.append($("<div>").addClass("etsy-header").html("Etsy Favorites"));
+				etsy.append($("<div>").addClass("span12").append(
+					$("<div>").addClass("etsy-header").html("Etsy Favorites")
+				));
 				
 				console.log("ADDING ETSY");
 				
@@ -159,7 +161,8 @@ Results.prototype = {
 				$("<div>").addClass("selling").html(state.product[state.number].ItemAttributes.Title).click(function(){
 					window.open(state.product[state.number].DetailPageURL, '_blank');
 				})
-			).append($("<a>", {href: "#"}).html("View More...").click(function(){
+			).append($("<a>").html("View More...").click(function(){
+				this.remove();
 				that.states[inSender].number++;
 				that.addNext(inSender);
 				//This should not do this. This should go to amazon.
