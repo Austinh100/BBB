@@ -46,7 +46,7 @@ Results.prototype = {
 		}).done(function(inSender, inEvent){
 			
 			
-			var renderInto = document.getElementById("renderInto");
+			var renderInto = $("#renderInto");
 			
 			for(var i = 0; i < 5; i++){
 				var top = $("<div>").addClass("row");
