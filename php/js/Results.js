@@ -48,6 +48,8 @@ Results.prototype = {
 			
 			var renderInto = $("#renderInto");
 			
+			renderInto.html(" ");
+			
 			for(var i = 0; i < 5; i++){
 				var top = $("<div>").addClass("row");
 			
@@ -55,13 +57,23 @@ Results.prototype = {
 					$("<div>").addClass("hit").append(
 						$("<div>").addClass("hit-header").html("Because They Liked")
 					).append(
-						$("<div>").addClass("hit-label").html(ret[i])
+						$("<div>").addClass("hit-label").html(ret[i][0])
 					)
 				);
-			
-				var right = $("<div>").addClass("span6").append(
-					$("<div>").addClass("selling")
-				)
+				//We show the top three results for the top like/interest/pinterest.
+				if(i === 0){
+					var right = $("<div>").addClass("span6").append(
+						$("<div>").addClass("selling")
+					).append(
+						$("<div>").addClass("selling")
+					).append(
+						$("<div>").addClass("selling")
+					)
+				}else{
+					var right = $("<div>").addClass("span6").append(
+						$("<div>").addClass("selling")
+					)
+				}
 				
 				top.append(left).append(right);
 				

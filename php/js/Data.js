@@ -4,9 +4,9 @@
  
 function bigArrayAnalysis(data)
 {      
-        var existsP = 0;  // Flag for whether or not a keyword has already been logged
-        var existsFl = 0;
-        var existsFi = 0;
+        var existsP  = -1;  // Flag for whether or not a keyword has already been logged
+        var existsFl = -1;
+        var existsFi = -1;
         var length = data[0].length;
        
         if( data[1].length > length )   {
@@ -21,7 +21,7 @@ function bigArrayAnalysis(data)
         var results = [];
         results.push([]);
         results.push([]);
-		results.push([]);
+                results.push([]);
        
         var etsyResults = [];
         etsyResults.push([]);
@@ -45,7 +45,7 @@ function bigArrayAnalysis(data)
                         if( data[1].length > i && results[1][j] == data[1][i] ) {
                                 existsFl = j + 1;
                         }
-                    
+                   
                         if( data[2].length > i && results[2][j] == data[2][i] ) {
                                 existsFi = j + 1;
                         }
@@ -54,33 +54,40 @@ function bigArrayAnalysis(data)
                 }//end for
                
                         if( data[0].length > i ) {
-                        if( existsP == 0 ) // If the pinterest word does not exist
+                        if( existsP == -1 ) // If the pinterest word does not exist
                         {
-                                results[0].push( data[0][i] );
+                                var x = results[0].push( data[0][i] );
                                 results[1].push( 30 );
+                                if( data[1][i] == data[0][i] )
+                                        existsFl = x;
+                                if( data[2][i] == data[0][i] )
+                                        existsFi = x;
                         }
                         else // if it does
                         {
                                 results[1][existsP - 1] += 15; // Recall the location of the similiar word
-                                existsP = 0 // reset exists
+                                existsP = -1; // reset exists
                         }
                         }
                
                 if( data[1].length > i ) {
-                        if( existsFl == 0 )
+                        if( existsFl == -1 )
                         {
-                                results[0].push( data[1][i] );
+                                var x = results[0].push( data[1][i] );
                                 results[1].push( 15 );
+                                if( data[2][i] == data[1][i] )
+                                        existsFi = x;
                         }
                         else
                         {
+                                       
                                 results[1][existsFl - 1] += 10; // Recall the location of the similiar word
-                                existsP = 0 // reset exists
+                                existsP = -1; // reset exists
                         }
                        }
              
               if( data[2].length > i ) {
-                        if( existsFi == 0 )
+                        if( existsFi == -1 )
                         {
                                 results[0].push( data[2][i] );
                                 results[1].push( 7 );
@@ -88,7 +95,7 @@ function bigArrayAnalysis(data)
                         else
                         {
                                 results[1][existsFi - 1] += 5; // Recall the location of the similiar word
-                                existsP = 0 // reset exists
+                                existsP = -1; // reset exists
                         }
                 }
             }
@@ -112,7 +119,7 @@ function sortWrap(bigArray, etsyResults)        {
         sortedArray.sort(function(a,b) {
                 return b[1]-a[1];
         });
-		
-		return sortedArray;
+               
+                return sortedArray;
        
 }
