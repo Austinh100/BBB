@@ -206,7 +206,8 @@ Results.prototype = {
 						window.open(state.product[state.number].DetailPageURL, '_blank');
 					})
 				)
-				if(state.product && state.product[state.numer+1]){
+				
+				if(state.product && state.product[state.number+1]){
 					r.append($("<a>").html("View More...").click(function(){
 						this.remove();
 						that.states[inSender].number++;
