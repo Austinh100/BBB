@@ -37,8 +37,6 @@ Results.prototype = {
 			req += ret[i][0] + ","
 		}
 		
-		console.log(req);
-		
 		//Kick off to data layer:
 		$.ajax("https://giftfinder-bbbros.rhcloud.com/amazon.php", {
 			method: "get",
@@ -46,7 +44,30 @@ Results.prototype = {
 				terms: req
 			}
 		}).done(function(inSender, inEvent){
-			console.log(inSender, inEvent);
+			
+			
+			var renderInto = document.getElementById("renderInto");
+			
+			for(var i = 0; i < 5; i++){
+				var top = $("<div>").addClass("row");
+			
+				var left = $("<div>").addClass("span6").append(
+					$("<div>").addClass("hit").append(
+						$("<div>").addClass("hit-header").html("Because They Liked")
+					).append(
+						$("<div>").addClass("hit-label").html(ret[i])
+					)
+				);
+			
+				var right = $("<div>").addClass("span6").append(
+					$("<div>").addClass("selling")
+				)
+				
+				top.append(left).append(right);
+				
+				renderInto.append(top);
+			}
+			
 		});
 	}
 }

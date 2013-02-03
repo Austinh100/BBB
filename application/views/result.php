@@ -88,7 +88,7 @@
 			</div>
 
 			<!-- Here contains all of the hits we get -->
-			<div class="container" style="margin-top:10px;">
+			<div class="container" id="renderInto" style="margin-top:10px;">
 				
 				<!-- This is the top hits row, it's gonna get very confusing and very fast. -->
 				<div class="row">
