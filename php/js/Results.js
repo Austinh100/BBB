@@ -151,7 +151,7 @@ Results.prototype = {
 					)
 				);
 				
-				var product = inSender[ret[i][0]];
+				var product = inSender[ret[i][0];
 				
 				
 				var that = this;

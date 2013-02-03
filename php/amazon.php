@@ -31,7 +31,7 @@ class XmlToJson {
 
 $ret = array();
 
-$terms = explode(",", strtolower($_GET["terms"]));
+$terms = explode(",", $_GET["terms"]);
 foreach($terms as $term){
 	$a = json_decode(amazon($term), true);
 	if($a && $a["Items"] && $a["Items"]["Item"]){
