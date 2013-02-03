@@ -191,7 +191,6 @@ Results.prototype = {
 		if(state.product && state.product[state.number]){
 			
 			var price = state.product[state.number].OfferSummary && state.product[state.number].OfferSummary.LowestNewPrice && state.product[state.number].OfferSummary.LowestNewPrice.Amount;
-			
 			if(!price || this.maxPrice >= (100 / parseInt(price))){
 				var r = state.right.append(
 					$("<div>").addClass("selling").append(
@@ -203,7 +202,7 @@ Results.prototype = {
 					})
 				)
 				//TODO: Max Price:
-				if(state.product && state.product[state.numer+1] && (!price || this.maxPrice >= (100 / parseInt(price)))){
+				if(state.product && state.product[state.numer+1]){
 					r.append($("<a>").html("View More...").click(function(){
 						this.remove();
 						that.states[inSender].number++;
@@ -212,6 +211,7 @@ Results.prototype = {
 					}));
 				}
 			}else{
+				console.log("adding next");
 				//We're out of price range, try to fetch the next result.
 				this.states[inSender].number++;
 				this.addNext(inSender);
