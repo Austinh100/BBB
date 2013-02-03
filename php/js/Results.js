@@ -190,7 +190,10 @@ Results.prototype = {
 		var that = this;
 		if(state.product && state.product[state.number]){
 			
-			if(this.maxPrice >= (100 / parseInt(state.product[state.number].OfferSummary.LowestNewPrice.Amount))){
+			var price = state.product[state.number].OfferSummary.LowestNewPrice && state.product[state.number].OfferSummary.LowestNewPrice.Amount;
+			console.log(price);
+			
+			if(price && this.maxPrice >= (100 / parseInt(price))){
 				console.log("Out of range");
 			}
 			

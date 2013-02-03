@@ -35,17 +35,15 @@
     	
     	<!-- Contains everything in the website -->
     	<div class="container" id="splash">
-    		<div class="header">
-    			<a href="#">Giftr</a>
-    		</div>
     		<!-- Description of the Product -->
     		<div class="row">
     			
-    			<div class="span12 intro">
-    				<p>Bro, we understand. Need a gift fast? We have what you need. We sludge through the trenches
-    				   to find the perfect gift for the person you want. Be it a girlfriend, fiance, wife, friend, we
-    				   we compile all of their social media data and give you the chance to find the perfect gift.
-    				   Using Facebook, we use our manly algorithms to find what you need. Start now Click the Button Below
+    			<div class="span8 offset2 intro">
+		    		<div class="header">
+		    			<a href="#">Giftr</a>
+		    		</div>
+    				<p>
+						Hey, we understand. Buying gifts for people is hard. Giftr uses the power of social media to match you with the perfect gift. Log into Facebok and start searching now.
     				</p>
     			</div>
     			
