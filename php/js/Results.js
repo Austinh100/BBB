@@ -109,7 +109,7 @@ Results.prototype = {
 			renderInto.html(" ");
 			
 			if(this.etsy && this.rawEtsy && this.etsy.length > 0){
-				var testy = jQuery.extend({}, this.etsy);
+				var testy = this.etsy;
 				if(testy.length >= 5){
 					ret.splice(5, testy.length-4);
 				}
@@ -134,7 +134,7 @@ Results.prototype = {
 				
 					renderInto.append(etsy);
 				}
-			}
+			
 			
 			for(var i = 0; i < 5; i++){
 				
