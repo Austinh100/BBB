@@ -124,7 +124,7 @@ Results.prototype = {
 				}
 				
 				for(var i = 0; i < this.rawEtsy.length; i++){
-					if(this.maxPrice >= parseInt(this.rawEtsy.price[i])){
+					if(this.maxPrice >= parseInt(this.rawEtsy[i].price)){
 						this.rawEtsy[i].inPrice = true;
 					}else{
 						this.rawEtsy[i].inPrice = false;
@@ -189,6 +189,11 @@ Results.prototype = {
 		var state = this.states[inSender];
 		var that = this;
 		if(state.product && state.product[state.number]){
+			
+			if(this.maxPrice >= (100 / parseInt(state.product[state.number].OfferSummary.LowestNewPrice.Amount))){
+				console.log("Out of range");
+			}
+			
 			var r = state.right.append(
 				$("<div>").addClass("selling").append(
 					$("<div>").addClass("image-amazon").css("backgroundImage", "url(" + state.product[state.number].MediumImage.URL + ")")
