@@ -213,7 +213,7 @@ Results.prototype = {
 						that.states[inSender].number++;
 						that.addNext(inSender);
 						//This should not do this. This should go to amazon.
-					}));
+					});
 					r.append(el);
 				}
 			}else{
