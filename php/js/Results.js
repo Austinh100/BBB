@@ -159,10 +159,11 @@ Results.prototype = {
 					console.log(inSender);
 					that.states[inSender].number++;
 					that.addNext(inSender.state.number);
+					//This should not do this. This should go to amazon.
 				})
 			).append($("<a>").html("View More...").click(function(){
 					//TODO:
-			});
+			}));
 			this.states[inSender].number++;
 			console.log(this);
 		}
