@@ -105,12 +105,12 @@ body {
 	height:150px;
 }
 .hit-header {
-	display: block;
 	font-size: 1.6em;
 	font-family: 'Roboto Condensed', sans-serif;
 	color: rgba(255,255,255,0.5);
 	font-weight: bold;
 	text-transform: uppercase;
+	position: absolute;
 }
 .hit-label {
 	font-size: 3em;
