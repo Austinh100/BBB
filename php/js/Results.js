@@ -115,6 +115,8 @@ Results.prototype = {
 				
 				etsy.append($("<div>").addClass("etsy-header").addContent("Etsy Favorites"));
 				
+				console.log("ADDING ETSY");
+				
 				renderInto.append(etsy);
 			}
 			
@@ -155,7 +157,7 @@ Results.prototype = {
 		var that = this;
 		if(state.product && state.product[state.number]){
 			state.right.append(
-				$("<div>").addClass("selling").html(state.product[state.number].ItemAttributes.Title).click(function(inSender){
+				$("<div>").addClass("selling").html(state.product[state.number].ItemAttributes.Title).click(function(){
 					console.log(inSender);
 					that.states[inSender].number++;
 					that.addNext(inSender.state.number);
