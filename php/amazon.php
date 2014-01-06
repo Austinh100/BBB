@@ -44,8 +44,8 @@ echo json_encode($ret);
 
 function amazon($t){
 
-	$AWS_ACCESS_KEY_ID = "AKIAJ3VHRV6JT67WLIMQ";
-	$AWS_SECRET_ACCESS_KEY = "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";
+	$AWS_ACCESS_KEY_ID = "";
+	$AWS_SECRET_ACCESS_KEY = "";
 
 	$base_url = "http://ecs.amazonaws.com/onca/xml?";
 	$url_params = array('Operation'=>"ItemSearch",'Service'=>"AWSECommerceService",
